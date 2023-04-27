@@ -696,14 +696,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871246692}
-  m_LocalRotation: {x: -0, y: -0, z: -0.9999905, w: 0.00435445}
-  m_LocalPosition: {x: -0.032616913, y: 3.556936, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 4.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.501}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1871246697
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 2067552611}
   - component: {fileID: 2067552612}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Paddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
