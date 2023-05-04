@@ -1560,6 +1560,7 @@ GameObject:
   - component: {fileID: 1871246695}
   - component: {fileID: 1871246694}
   - component: {fileID: 1871246697}
+  - component: {fileID: 1871246698}
   m_Layer: 0
   m_Name: CurveShape
   m_TagString: Untagged
@@ -1756,6 +1757,18 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1871246698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871246692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795d84f78e9cd054594c782da1e89bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1887969924
 GameObject:
   m_ObjectHideFlags: 0
