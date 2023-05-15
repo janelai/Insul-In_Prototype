@@ -18,7 +18,7 @@ public class MoveByTouch : MonoBehaviour
         {
             Touch touch = Input.GetTouch(0);
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            Debug.Log(touchPosition);
+            //Debug.Log(touchPosition);
             // touch.position  in screen coordinates, measured in pixels. Have to convert from screen to world space
             touchPosition.z = 0;
 

@@ -17,7 +17,7 @@ public class GameSceneManager : MonoBehaviour
         private set;
     }
 
-    //GameSceneManager is a singleton
+    //GameSceneManager is a singleton and handles scene changes
     public static GameSceneManager Instance
     {
         get;
@@ -32,6 +32,10 @@ public class GameSceneManager : MonoBehaviour
             currentScene = Scenes.STARTMENU;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void LoadScene(Scenes scene)
@@ -40,8 +44,19 @@ public class GameSceneManager : MonoBehaviour
         SceneManager.LoadScene((int)scene);
     }
 
+    public void StartGame()
+    {
+        LoadScene(Scenes.INSULINBALLTEST);
+    }
+
     public void ReturnToStartMenu()
     {
         LoadScene(Scenes.STARTMENU);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quitting!");
     }
 }
