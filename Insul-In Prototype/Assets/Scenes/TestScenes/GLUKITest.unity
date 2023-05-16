@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 147166342}
   - component: {fileID: 147166341}
   - component: {fileID: 147166340}
+  - component: {fileID: 147166344}
   m_Layer: 0
   m_Name: CurveShape (1)
   m_TagString: Untagged
@@ -331,6 +332,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &147166344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147166339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795d84f78e9cd054594c782da1e89bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &261244491
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,6 +783,7 @@ GameObject:
   - component: {fileID: 687187511}
   - component: {fileID: 687187510}
   - component: {fileID: 687187509}
+  - component: {fileID: 687187513}
   m_Layer: 0
   m_Name: CurveShape (3)
   m_TagString: Untagged
@@ -966,6 +980,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &687187513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687187508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795d84f78e9cd054594c782da1e89bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &988528796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1056,6 +1082,7 @@ GameObject:
   - component: {fileID: 1219871705}
   - component: {fileID: 1219871704}
   - component: {fileID: 1219871703}
+  - component: {fileID: 1219871707}
   m_Layer: 0
   m_Name: CurveShape (2)
   m_TagString: Untagged
@@ -1252,6 +1279,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+--- !u!114 &1219871707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219871702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795d84f78e9cd054594c782da1e89bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1254174711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1726,6 +1765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instakill Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 2452214793354253228, guid: f8a924d40644f1a44aa8309f070a07e2, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8073374981971522361, guid: f8a924d40644f1a44aa8309f070a07e2, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1848,10 +1891,6 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 382852862}
-    - target: {fileID: 840094976699370908, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1900,16 +1939,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: GLUKI
       objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: pivot_point
-      value: 
-      objectReference: {fileID: 382852862}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
