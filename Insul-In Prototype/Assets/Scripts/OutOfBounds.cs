@@ -4,23 +4,13 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
-    bool ballOut = false;
-    // Update is called once per frame
-    void Update()
+    // If insulin collides barrier, destroy!
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
-    }
-
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        //this.gameObject.SetActive(false);
-        if(collision.gameObject.tag == "Insulin")
+        if (collision.gameObject.tag == "Insulin")
         {
             Debug.Log("It was the insulin!");
             Destroy(collision.gameObject);
         }
-        Debug.Log("Instakill enter");
     }
-
 }
