@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class OutOfBounds : MonoBehaviour
 {
+    bool ballOut = false;
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnTriggerExit(Collider other)
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Something left the out of bounds");
-        if(other.tag == "Insulin")
+        //this.gameObject.SetActive(false);
+        if(collision.gameObject.tag == "Insulin")
         {
             Debug.Log("It was the insulin!");
-            Destroy(other);
+            Destroy(collision.gameObject);
         }
+        Debug.Log("Instakill enter");
     }
+
 }
