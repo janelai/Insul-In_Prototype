@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7351775666295550869}
   - component: {fileID: 226874596689831159}
   - component: {fileID: 3172965637169544145}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Paddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,4 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle_speed: 40.7
   camera: {fileID: 0}
+  paddle: {fileID: 0}
   pivot_point: {fileID: 0}
+  left: 0
+  right: 0
