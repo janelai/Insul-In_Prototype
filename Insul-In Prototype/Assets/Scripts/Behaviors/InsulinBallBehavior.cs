@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class InsulinBallBehavior : MonoBehaviour
 {
-    [SerializeField] float speed = 300f;
+    [SerializeField] float speedForce = 5f;
     private Rigidbody2D ball;
+    private Vector2 previousVelocity;
+    private float continuousSpeed;
 
     private void Awake()
     {
@@ -14,6 +16,24 @@ public class InsulinBallBehavior : MonoBehaviour
 
     private void Start()
     {
-        this.ball.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
+        Vector2 force = Vector2.up * speedForce;
+        this.ball.AddForce(force, ForceMode2D.Impulse);
+        continuousSpeed = ball.velocity.magnitude;
+    }
+
+    private void FixedUpdate()
+    {
+        // If the ball's speed changed, set the speed back to its original speed
+        if (ball.velocity.magnitude != continuousSpeed)
+        {
+            ball.velocity = ball.velocity.normalized * continuousSpeed;
+        }
+
+        previousVelocity = ball.velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ball.velocity = Vector2.Reflect(previousVelocity, collision.GetContact(0).normal);
     }
 }
