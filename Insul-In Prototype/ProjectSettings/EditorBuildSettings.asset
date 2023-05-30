@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/TestScenes/InsulinBallTest.unity
+    path: Assets/Scenes/TestScenes/DialogueTest.unity
     guid: 4dda035e09c338e429486897c04dae08
   m_configObjects: {}
