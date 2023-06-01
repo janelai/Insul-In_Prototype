@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         }            
     }
 
-    IEnumerator TypeOutSentence(string displaySentence)
+    private IEnumerator TypeOutSentence(string displaySentence)
     {
         dialogueText.text = "";
         foreach (char character in displaySentence.ToCharArray())

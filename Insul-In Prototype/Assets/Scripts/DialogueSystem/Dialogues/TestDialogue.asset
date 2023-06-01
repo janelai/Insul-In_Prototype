@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   sentences:
-  - Running a test here
-  - Hey im over here
-  - Nobody will save you O.O
+  - You are in the blood stream. You just digested some food and it changed into
+    glucose molecules.
+  - The glucose molecules can't stay in the blood stream.
