@@ -57,8 +57,22 @@ public class DialogueManager : MonoBehaviour
         string displaySentence = lines.Dequeue();
         if (dialogueText != null)
         {
-            dialogueText.text = displaySentence;
-            uiButton.SetActive(true);
+            StopAllCoroutines();
+            StartCoroutine(TypeOutSentence(displaySentence));
         }            
+    }
+
+    IEnumerator TypeOutSentence(string displaySentence)
+    {
+        dialogueText.text = "";
+        foreach (char character in displaySentence.ToCharArray())
+        {
+            dialogueText.text += character;
+            if (dialogueText.text == displaySentence)
+            {
+                uiButton.SetActive(true);
+            }
+            yield return null;
+        }
     }
 }
