@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrickBehavior : MonoBehaviour
+public class CellCenterBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -10,17 +10,11 @@ public class BrickBehavior : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-         
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Insulin"))
+        if (collision.gameObject.CompareTag("GLUKI"))
         {
-            this.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
     }
 }

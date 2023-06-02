@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Insulin
   - GLUKI
+  - CellCenter
   layers:
   - Default
   - TransparentFX

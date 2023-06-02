@@ -15,8 +15,13 @@ public class GLUKIBehavior : MonoBehaviour
     private void Awake()
     {
         GLUKI = this.GetComponent<Rigidbody2D>();
+
+        shootAtCell();
+
+        timer = returnTimer;
     }
 
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +29,7 @@ public class GLUKIBehavior : MonoBehaviour
         shootAtCell();
 
         timer = returnTimer;
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
