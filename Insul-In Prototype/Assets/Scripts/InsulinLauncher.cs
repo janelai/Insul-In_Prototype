@@ -8,18 +8,20 @@ public class InsulinBallShooter : MonoBehaviour, IPointerDownHandler, IPointerUp
 {
 
     [SerializeField] public GameObject insulinBall;
-    [SerializeField] public Vector3 shootingPosition; 
+    [SerializeField] public Transform launcher_pos; 
+
+    private Quaternion launcher_pos_rotation;
 
     // Update is called once per frame
     void Update()
     {
-        
+        launcher_pos_rotation = launcher_pos.rotation;
     }
 
     public void OnPointerDown(PointerEventData data)
     {
         Debug.Log("Insulin ball shot");
-        GameObject newInsulinBall = Instantiate(insulinBall, shootingPosition, Quaternion.identity);
+        GameObject newInsulinBall = Instantiate(insulinBall, launcher_pos.position, launcher_pos_rotation);
     }
 
     public void OnPointerUp(PointerEventData data)
