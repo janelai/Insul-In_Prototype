@@ -2591,25 +2591,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 72896376428873618, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 182310713624116380, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 494862742902912707, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
       propertyPath: m_Name
       value: InstaKillBarrier
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391077265730068205, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2103776465193579009, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9056134058632430377, guid: 5e317629e1f5bd141bc748f93bc34e3c, type: 3}
       propertyPath: m_RootOrder
@@ -2793,22 +2777,10 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 382852862}
-    - target: {fileID: 4210585911440516024, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 1887969924}
-    - target: {fileID: 4210585911440516024, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: pivot_point
-      value: 
-      objectReference: {fileID: 382852862}
     - target: {fileID: 5328338550670126958, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5328338550670126958, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7783821852106295641, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: camera
       value: 
@@ -2817,12 +2789,7 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 382852862}
-    - target: {fileID: 7783821852106295641, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: paddle_speed
-      value: 50.7
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4210585911440516024, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1696e0ada67f0f543abe803d7372e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddle_speed: 40.7
+  paddle_speed: 50.7
   camera: {fileID: 0}
   paddle: {fileID: 4653969852290297150}
   pivot_point: {fileID: 0}
@@ -301,7 +301,7 @@ Transform:
   - {fileID: 7080775768337119224}
   - {fileID: 5321942886255821083}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5378630344148302048
 GameObject:
