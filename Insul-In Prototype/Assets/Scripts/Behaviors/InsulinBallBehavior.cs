@@ -16,7 +16,7 @@ public class InsulinBallBehavior : MonoBehaviour
 
     private void Start()
     {
-        Vector2 force = Vector2.up * speedForce;
+        Vector2 force = ball.transform.up * speedForce;
         this.ball.AddForce(force, ForceMode2D.Impulse);
         continuousSpeed = ball.velocity.magnitude;
     }
