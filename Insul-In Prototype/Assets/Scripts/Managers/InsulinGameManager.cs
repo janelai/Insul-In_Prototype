@@ -44,6 +44,12 @@ public class InsulinGameManager : MonoBehaviour
         GameSceneManager.Instance.StartGame();
     }
 
+    public void ReturnToStartMenu()
+    {
+        currentState = GAMESTATE.STARTMENU;
+        GameSceneManager.Instance.ReturnToStartMenu();
+    }
+
     public void Pause()
     {
         if (currentState == GAMESTATE.PLAYING)  // If playing, pause game
