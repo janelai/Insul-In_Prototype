@@ -8,20 +8,69 @@ public class InsulinBallShooter : MonoBehaviour, IPointerDownHandler, IPointerUp
 {
 
     [SerializeField] public GameObject insulinBall;
-    [SerializeField] public Transform launcher_pos; 
+    [SerializeField] public Transform launcher_pos;
+    [SerializeField] public int insulin_ammo_amount = 4;
 
-    private Quaternion launcher_pos_rotation;
+    [SerializeField] public Image[] insulin_ammo_display; // 0-3, top-bottom
 
     // Update is called once per frame
     void Update()
     {
-        launcher_pos_rotation = launcher_pos.rotation;
+        int ammo = insulin_ammo_amount;
+
+        switch(ammo)
+        {
+            case 4:
+                foreach(Image img in insulin_ammo_display)
+                {
+                    img.gameObject.SetActive(true);
+                }
+            break;
+
+            case 3:
+                insulin_ammo_display[3].gameObject.SetActive(false);
+                insulin_ammo_display[2].gameObject.SetActive(true);
+                insulin_ammo_display[1].gameObject.SetActive(true);
+                insulin_ammo_display[0].gameObject.SetActive(true);
+            break;
+
+            case 2:
+                insulin_ammo_display[3].gameObject.SetActive(false);
+                insulin_ammo_display[2].gameObject.SetActive(false);
+                insulin_ammo_display[1].gameObject.SetActive(true);
+                insulin_ammo_display[0].gameObject.SetActive(true);
+            break;
+
+            case 1:
+                insulin_ammo_display[3].gameObject.SetActive(false);
+                insulin_ammo_display[2].gameObject.SetActive(false);
+                insulin_ammo_display[1].gameObject.SetActive(false);
+                insulin_ammo_display[0].gameObject.SetActive(true);
+            break;
+
+            case 0:
+                foreach(Image img in insulin_ammo_display)
+                {
+                    img.gameObject.SetActive(false);
+                }
+                // No insulin ball ammo
+            break;
+        }
     }
 
     public void OnPointerDown(PointerEventData data)
     {
-        Debug.Log("Insulin ball shot");
-        GameObject newInsulinBall = Instantiate(insulinBall, launcher_pos.position, launcher_pos_rotation);
+        if (insulin_ammo_amount > 0)
+        {
+            Debug.Log("Insulin ball shot");
+            GameObject newInsulinBall = Instantiate(insulinBall, launcher_pos.position, launcher_pos.rotation);
+
+            insulin_ammo_amount -= 1;
+        }
+        else
+        {
+            Debug.Log("No insulin ball ammo");
+        }
     }
 
     public void OnPointerUp(PointerEventData data)

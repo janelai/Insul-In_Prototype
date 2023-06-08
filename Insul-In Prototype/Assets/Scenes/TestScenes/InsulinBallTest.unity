@@ -1731,6 +1731,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795d84f78e9cd054594c782da1e89bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1302533409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6050963322820307619, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+  m_PrefabInstance: {fileID: 8080501035105113395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1307464524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +1810,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1412887038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6167668982213035643, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+  m_PrefabInstance: {fileID: 8080501035105113395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476985624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2268,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
   m_PrefabInstance: {fileID: 227562076}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882185928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2203907521701196834, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+  m_PrefabInstance: {fileID: 8080501035105113395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1887969924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2371,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933483633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8974457667038768518, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+  m_PrefabInstance: {fileID: 8080501035105113395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1961208415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
@@ -2866,9 +2910,73 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 382852862}
+    - target: {fileID: 1326817279655024623, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203907521701196834, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203907521701196834, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_amount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_display.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[0]
+      value: 
+      objectReference: {fileID: 1302533409}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[1]
+      value: 
+      objectReference: {fileID: 1412887038}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[2]
+      value: 
+      objectReference: {fileID: 1933483633}
+    - target: {fileID: 3115836402954730730, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[3]
+      value: 
+      objectReference: {fileID: 1882185928}
+    - target: {fileID: 3519552043439994288, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660900783954781441, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290573244801412583, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5328338550670126958, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050963322820307619, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050963322820307619, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167668982213035643, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167668982213035643, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7783821852106295641, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: camera
@@ -2878,6 +2986,18 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 382852862}
+    - target: {fileID: 8451225285480856750, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974457667038768518, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974457667038768518, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

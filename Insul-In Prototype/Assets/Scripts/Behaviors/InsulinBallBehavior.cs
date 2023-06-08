@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InsulinBallBehavior : MonoBehaviour
 {
-    [SerializeField] float speedForce = 5f;
+    [SerializeField] float speedForce = 6f;
     private Rigidbody2D ball;
     private Vector2 previousVelocity;
     private float continuousSpeed;
