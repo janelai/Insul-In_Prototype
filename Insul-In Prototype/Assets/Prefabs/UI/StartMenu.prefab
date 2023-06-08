@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &683080631236243526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 188784297882696480, guid: 7683d46abf5d18a40b759cc9f87174cd, type: 3}
-        m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
+      - m_Target: {fileID: 4215524437827110465, guid: 6aad7052a7bb04442900be056f15d392, type: 3}
+        m_TargetAssemblyTypeName: InsulinGameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 3
+  m_PixelsPerUnitMultiplier: 4
 --- !u!114 &4305165483807946308
 MonoBehaviour:
   m_ObjectHideFlags: 0

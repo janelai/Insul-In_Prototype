@@ -11,18 +11,10 @@ public class GameSceneManager : MonoBehaviour
         INSULINBALLTEST 
     }
 
-    public Scenes currentScene
-    {
-        get;
-        private set;
-    }
+    public Scenes currentScene { get; private set; }
 
     //GameSceneManager is a singleton and handles scene changes
-    public static GameSceneManager Instance
-    {
-        get;
-        private set;
-    }
+    public static GameSceneManager Instance { get; private set;}
 
     private void Awake()
     {
@@ -54,7 +46,7 @@ public class GameSceneManager : MonoBehaviour
         LoadScene(Scenes.STARTMENU);
     }
 
-    public void QuitGame()
+    public void Quit()
     {
         Application.Quit();
         Debug.Log("Quitting!");

@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InsulinGameManager : MonoBehaviour
 {
+    private Scene scene;
+    
     public enum GAMESTATE
     {
         STARTMENU,
@@ -10,27 +13,23 @@ public class InsulinGameManager : MonoBehaviour
         GAMEOVER
     }
 
-    public GAMESTATE currentState
-    {
-        get;
-        private set;
-    }
+    public GAMESTATE currentState { get; private set; }
 
     //GameManager is a singleton and handles the state of the game
-    public static InsulinGameManager Instance
-    {
-        get;
-        private set;
-    }
+    public static InsulinGameManager Instance{ get; private set;}
 
     private void Awake()
     {
         if (Instance == null)
         {
-            Debug.Log("Im awake");
-            currentState = GAMESTATE.STARTMENU;
+            // Add a listener to be called when a scene loads
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            scene = SceneManager.GetActiveScene();
         }
         else
         {
@@ -38,15 +37,34 @@ public class InsulinGameManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        // Clean up listener
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log($"Current scene: {GameSceneManager.Instance.currentScene} - {(int)GameSceneManager.Instance.currentScene}");
+        
+        if (scene.buildIndex == (int)GameSceneManager.Scenes.STARTMENU)     // if scene is start menu
+        {
+            currentState = GAMESTATE.STARTMENU;
+        }
+        else if(scene.buildIndex == (int)GameSceneManager.Scenes.INSULINBALLTEST)       // if scene is insulinballtest
+        {
+            currentState = GAMESTATE.PLAYING;
+        }
+    }
+
+
     public void StartGame()
     {
-        currentState = GAMESTATE.PLAYING;
         GameSceneManager.Instance.StartGame();
     }
 
     public void ReturnToStartMenu()
     {
-        currentState = GAMESTATE.STARTMENU;
         GameSceneManager.Instance.ReturnToStartMenu();
     }
 
@@ -56,13 +74,17 @@ public class InsulinGameManager : MonoBehaviour
         {
             currentState = GAMESTATE.PAUSED;
             Time.timeScale = 0;
-            Debug.Log("Pause game");
         }
         else if (currentState == GAMESTATE.PAUSED) // If game is already paused, unpause game
         {
             currentState = GAMESTATE.PLAYING;
             Time.timeScale = 1;
-            Debug.Log("Unpause game");
         }
+    }
+
+    public void QuitGame()
+    {
+        // Shut down game:
+        GameSceneManager.Instance.Quit();
     }
 }
