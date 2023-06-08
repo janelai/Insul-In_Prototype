@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class BloodSugarLevel : MonoBehaviour
@@ -13,7 +14,8 @@ public class BloodSugarLevel : MonoBehaviour
     public int initBSL = 100;
     public int GLUKIBSLVal = 10;
 
-    public TMP_Text BSLVal; 
+    public TMP_Text BSLVal;
+    public Slider slider;
 
     private int prevNumGLUKI;
     public int BSL;
@@ -25,7 +27,7 @@ public class BloodSugarLevel : MonoBehaviour
         BSL = initBSL;
         prevNumGLUKI = GameObject.FindGameObjectsWithTag("GLUKI").Length;
         BSLVal.text = BSL.ToString();
-
+        slider.value = BSL;
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class BloodSugarLevel : MonoBehaviour
         if (GLUKIDif != 0)
         {
             BSLVal.text = BSL.ToString();
+            slider.value = BSL;
         }
 
         /*
