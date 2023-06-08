@@ -8,6 +8,9 @@ public class PlayerHUDManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject endMenu;
 
+    public float GameTimer = 5f; // Game Lasts 30 Seconds
+    public float ElapsedTime;
+
     public void PauseGame()
     {
         //try to deactive the component, not the parent
@@ -24,4 +27,37 @@ public class PlayerHUDManager : MonoBehaviour
         }
 
     }
+
+    public void EndGame()
+    {
+        Debug.Log("EndGame Called!");
+        InsulinGameManager.Instance.GameOver();
+        if (InsulinGameManager.Instance.currentState == InsulinGameManager.GAMESTATE.GAMEOVER)
+        {
+            endMenu.SetActive(true);
+        }
+    }
+
+
+    // just testing if this works :)
+    private void Awake()
+    {
+        ElapsedTime = GameTimer;
+    }
+
+    private void Update()
+    {
+        if (ElapsedTime > 0f)
+        {
+            ElapsedTime -= Time.deltaTime;
+        }
+        else
+        {
+            if (!endMenu.activeSelf) //if not already active -> call EndGame :)
+            {
+                EndGame();
+            }
+        }
+    }
+
 }

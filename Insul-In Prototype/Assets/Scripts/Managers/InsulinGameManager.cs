@@ -56,6 +56,8 @@ public class InsulinGameManager : MonoBehaviour
         else if(scene.buildIndex == (int)GameSceneManager.Scenes.INSULINBALLTEST)       // if scene is insulinballtest
         {
             currentState = GAMESTATE.PLAYING;
+            if (Time.timeScale != 1)
+                Time.timeScale = 1;
         }
     }
 
@@ -82,6 +84,12 @@ public class InsulinGameManager : MonoBehaviour
             currentState = GAMESTATE.PLAYING;
             Time.timeScale = 1;
         }
+    }
+
+    public void GameOver()
+    {
+        currentState = GAMESTATE.GAMEOVER;
+        Time.timeScale = 0; //pause time in the game since the game is over :)
     }
 
     public void QuitGame()
