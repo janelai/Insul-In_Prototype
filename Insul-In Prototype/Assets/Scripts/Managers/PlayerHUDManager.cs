@@ -15,16 +15,12 @@ public class PlayerHUDManager : MonoBehaviour
         if (InsulinGameManager.Instance.currentState == InsulinGameManager.GAMESTATE.PAUSED)
         {
             // Activate pause menu:
-            /*GameObject[] children = pauseMenu.GetComponentsInChildren<GameObject>();
-            foreach(GameObject child in children)*/
             pauseMenu.SetActive(true);
-            Debug.Log("Pause");
         }
         else if (InsulinGameManager.Instance.currentState == InsulinGameManager.GAMESTATE.PLAYING)
         {
             // Deactivate pause menu:
             pauseMenu.SetActive(false);
-            Debug.Log("Unpause");
         }
 
     }

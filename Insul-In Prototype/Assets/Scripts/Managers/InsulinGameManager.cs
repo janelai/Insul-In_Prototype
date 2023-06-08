@@ -49,6 +49,8 @@ public class InsulinGameManager : MonoBehaviour
         
         if (scene.buildIndex == (int)GameSceneManager.Scenes.STARTMENU)     // if scene is start menu
         {
+            if(Time.timeScale != 1)
+                Time.timeScale = 1;     // reassure me that it is NOT paused
             currentState = GAMESTATE.STARTMENU;
         }
         else if(scene.buildIndex == (int)GameSceneManager.Scenes.INSULINBALLTEST)       // if scene is insulinballtest
