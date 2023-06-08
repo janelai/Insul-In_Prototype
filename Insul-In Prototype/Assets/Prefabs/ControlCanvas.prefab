@@ -486,11 +486,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
+--- !u!114 &1746379263681497675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3048651116277452149, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
+  m_PrefabInstance: {fileID: 3635142369517029182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2185024169660901011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3179643997267108269, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
+  m_PrefabInstance: {fileID: 3635142369517029182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3539892262483304886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 239438415331878536, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
+  m_PrefabInstance: {fileID: 3635142369517029182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4827820606202443832 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8110213247586090758, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
   m_PrefabInstance: {fileID: 3635142369517029182}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5998318358147594258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7011207957348073260, guid: b9d2e4f99821a114abb21328674030c3, type: 3}
+  m_PrefabInstance: {fileID: 3635142369517029182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8913953446623234893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -499,6 +543,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 319969056199986475}
     m_Modifications:
+    - target: {fileID: 2099382418356632471, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
+      propertyPath: insulin_ammo_display.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099382418356632471, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[0]
+      value: 
+      objectReference: {fileID: 2185024169660901011}
+    - target: {fileID: 2099382418356632471, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[1]
+      value: 
+      objectReference: {fileID: 1746379263681497675}
+    - target: {fileID: 2099382418356632471, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[2]
+      value: 
+      objectReference: {fileID: 3539892262483304886}
+    - target: {fileID: 2099382418356632471, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
+      propertyPath: insulin_ammo_display.Array.data[3]
+      value: 
+      objectReference: {fileID: 5998318358147594258}
     - target: {fileID: 4095898323008977516, guid: 35b4c75d4725bfe489641eca65eeca98, type: 3}
       propertyPath: m_Name
       value: InsulinLauncherButton
