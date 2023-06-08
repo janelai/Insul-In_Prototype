@@ -5,6 +5,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private float typePerSeconds = 0.2f;
     private TextMeshProUGUI dialogueText;
     private GameObject uiButton;
     private Queue<string> lines;
@@ -72,7 +73,7 @@ public class DialogueManager : MonoBehaviour
             {
                 uiButton.SetActive(true);
             }
-            yield return null;
+            yield return new WaitForSecondsRealtime(typePerSeconds);
         }
     }
 }
