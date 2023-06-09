@@ -7,19 +7,20 @@ using TMPro;
 public class BloodSugarLevel : MonoBehaviour
 {
     //PlaceHolderValues
-    public int minBSL = 40;
-    public int maxBSL = 350;
-    public int minGoodBSL = 80;
-    public int maxGoodBSL = 130;
-    public int initBSL = 100;
-    public int GLUKIBSLVal = 10;
+    [SerializeField] private int minBSL = 40;
+    [SerializeField] private int maxBSL = 350;
+    [SerializeField] private int minGoodBSL = 80;
+    [SerializeField] private int maxGoodBSL = 130;
+    [SerializeField] private int initBSL = 100;
+    [SerializeField] private int GLUKIBSLVal = 10;
 
-    public TMP_Text BSLVal;
-    public Slider slider;
+    [SerializeField] private TMP_Text BSLVal;
+    [SerializeField] private Slider slider;
 
     private int prevNumGLUKI;
-    public int BSL;
-    
+
+    // Allow scripts to grab but not set BSL:
+    public int BSL { get; private set;}
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class BloodSugarLevel : MonoBehaviour
         BSL = initBSL;
         prevNumGLUKI = GameObject.FindGameObjectsWithTag("GLUKI").Length;
         BSLVal.text = BSL.ToString();
-        slider.value = BSL;
+        //slider.value = BSL;
     }
 
     // Update is called once per frame
@@ -42,7 +43,7 @@ public class BloodSugarLevel : MonoBehaviour
         if (GLUKIDif != 0)
         {
             BSLVal.text = BSL.ToString();
-            slider.value = BSL;
+            //slider.value = BSL;
         }
 
         /*
