@@ -1112,10 +1112,6 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 383271408}
-    - target: {fileID: 4601827585040976593, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1887969926}
     - target: {fileID: 5328338550670126958, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: m_Name
       value: Player
