@@ -9,6 +9,7 @@ public class PlayerHUDManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject endMenu;
     [SerializeField] private TMP_Text endMenuBloodVal;
+    [SerializeField] private TMP_Text timerText;
     [SerializeField] private BloodSugarLevel bloodSugarLevel;
     [SerializeField] private float GameTimer = 5f; // Game Lasts 30 Seconds
     
@@ -20,14 +21,16 @@ public class PlayerHUDManager : MonoBehaviour
         ElapsedTime = GameTimer;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (ElapsedTime > 0f)   // if timer reaches 0
         {
             ElapsedTime -= Time.deltaTime;
+            InitializeTime(ElapsedTime);
         }
         else
         {
+            ElapsedTime = 0;
             if (!endMenu.activeSelf) //if not already active -> call EndGame :)
             {
                 EndGame();
@@ -59,6 +62,17 @@ public class PlayerHUDManager : MonoBehaviour
         {
             endMenu.SetActive(true);
             endMenuBloodVal.text = bloodSugarLevel.BSL.ToString();
+        }
+    }
+
+    // Convert seconds into time format:
+    private void InitializeTime(float timer)
+    {
+        if (timer >= 0)
+        {
+            float minutes = Mathf.FloorToInt(timer / 60);
+            float seconds = Mathf.FloorToInt(timer % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
     }
 }
