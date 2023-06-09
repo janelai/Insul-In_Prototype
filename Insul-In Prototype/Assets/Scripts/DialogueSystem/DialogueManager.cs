@@ -7,7 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private float typePerSeconds = 0.015f;
     private TextMeshProUGUI dialogueText;
-    private GameObject uiButton;
+    private GameObject nextButton;
+    private GameObject doneButton;
     private Queue<string> lines;
 
     // DialogueManager handles the dialogue by displaying
@@ -33,11 +34,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Set up text box, dialogue, and button
-    public void StartDialogue(TextMeshProUGUI textBox, Dialogue dialogue, GameObject button)
+    public void StartDialogue(TextMeshProUGUI textBox, Dialogue dialogue, GameObject button, GameObject otherButton)
     {
         Debug.Log("Connected to Dialogue Manager");
         dialogueText = textBox;
-        uiButton = button;
+        nextButton = button;
+        doneButton = otherButton;
         lines.Clear();
         foreach (string line in dialogue.sentences)
         {
@@ -47,21 +49,14 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public bool DisplayNextSentence()
+    public void DisplayNextSentence()
     {
-        if (lines != null && lines.Count == 0)
-        {
-            // End of Dialogue
-            Debug.Log("End of Dialogue");
-            return true;
-        }
         string displaySentence = lines.Dequeue();
         if (dialogueText != null)
         {
             StopAllCoroutines();
             StartCoroutine(TypeOutSentence(displaySentence));
         }
-        return false;
     }
 
     private IEnumerator TypeOutSentence(string displaySentence)
@@ -72,7 +67,14 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += character;
             if (dialogueText.text == displaySentence)
             {
-                uiButton.SetActive(true);
+                if (lines.Count == 0)
+                {
+                    doneButton.SetActive(true);
+                }
+                else
+                {
+                    nextButton.SetActive(true);
+                }
             }
             yield return new WaitForSecondsRealtime(typePerSeconds);
         }

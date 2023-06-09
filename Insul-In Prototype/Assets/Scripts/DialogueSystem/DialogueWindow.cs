@@ -17,7 +17,7 @@ public class DialogueWindow : MonoBehaviour
         TextMeshProUGUI text = textObject.GetComponent<TextMeshProUGUI>();
         if (text != null)
         {
-            DialogueManager.Instance.StartDialogue(text, dialogueList, nextButton);
+            DialogueManager.Instance.StartDialogue(text, dialogueList, nextButton, doneButton);
             doneButton.SetActive(false);
         }
     }
@@ -25,10 +25,6 @@ public class DialogueWindow : MonoBehaviour
     public void ContinueDialogue()
     {
         nextButton.SetActive(false);
-        bool isDialogueDone = DialogueManager.Instance.DisplayNextSentence();
-        if (isDialogueDone)
-        {
-            doneButton.SetActive(true);
-        }
+        DialogueManager.Instance.DisplayNextSentence();
     }
 }
