@@ -204,29 +204,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 680045009269281380}
     m_Modifications:
-    - target: {fileID: 812281680404622478, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1563421594355150536, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
-      propertyPath: GameTimer
-      value: 61
-      objectReference: {fileID: 0}
     - target: {fileID: 2988579168174781546, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: m_Name
       value: PlayerHUDManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5038273913992518550, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5571866848421855788, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7880444786660993214, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7919616109960846928, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: m_AnchorMax.x
