@@ -135,10 +135,6 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 383271408}
-    - target: {fileID: 840094976699370908, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -187,16 +183,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: GLUKI (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: pivot_point
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -478,6 +465,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6778353117425238912, guid: ce17c2c684a4b8b439757e0a3fc18cf4, type: 3}
+      propertyPath: spawn_rate
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778353117425238912, guid: ce17c2c684a4b8b439757e0a3fc18cf4, type: 3}
+      propertyPath: spawn_time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778353117425238912, guid: ce17c2c684a4b8b439757e0a3fc18cf4, type: 3}
       propertyPath: GLUKI_pivot_point
       value: 
       objectReference: {fileID: 383271408}
@@ -503,10 +498,6 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 383271408}
-    - target: {fileID: 840094976699370908, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -555,16 +546,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: GLUKI (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: pivot_point
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -581,10 +563,6 @@ PrefabInstance:
       propertyPath: pivot_point
       value: 
       objectReference: {fileID: 383271408}
-    - target: {fileID: 840094976699370908, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5766197365821153880, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -633,16 +611,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: GLUKI (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: pivot_point
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
-      propertyPath: initial_speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6766723817692740764, guid: 64606fc733626b149a551574dbb5a2ee, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -185,7 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivot_point: {fileID: 0}
-  initial_speed: 100
+  initial_speed: 150
+  returnTimer: 2
 --- !u!50 &5521433456197597797
 Rigidbody2D:
   serializedVersion: 4

@@ -8,6 +8,8 @@ public class PlayerHUDManager : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject endMenu;
+    [SerializeField] private GameObject winImage;
+    [SerializeField] private GameObject loseImage;
     [SerializeField] private TMP_Text endMenuBloodVal;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private BloodSugarLevel bloodSugarLevel;
@@ -61,6 +63,18 @@ public class PlayerHUDManager : MonoBehaviour
         if (InsulinGameManager.Instance.currentState == InsulinGameManager.GAMESTATE.GAMEOVER)
         {
             endMenu.SetActive(true);
+            if (bloodSugarLevel.HealthyBloodLevel())
+            {
+                // blood sugar level is healthy!
+                winImage.SetActive(true);
+                loseImage.SetActive(false);
+            }
+            else
+            {
+                // blood sugar level is not healthy
+                winImage.SetActive(false);
+                loseImage.SetActive(true);
+            }
             endMenuBloodVal.text = bloodSugarLevel.BSL.ToString();
         }
     }

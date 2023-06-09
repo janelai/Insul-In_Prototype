@@ -10,7 +10,7 @@ public class BloodSugarLevel : MonoBehaviour
     [SerializeField] private int minBSL = 40;
     [SerializeField] private int maxBSL = 350;
     [SerializeField] private int minGoodBSL = 80;
-    [SerializeField] private int maxGoodBSL = 130;
+    [SerializeField] private int maxGoodBSL = 140;
     [SerializeField] private int initBSL = 100;
     [SerializeField] private int GLUKIBSLVal = 10;
 
@@ -23,16 +23,16 @@ public class BloodSugarLevel : MonoBehaviour
     public int BSL { get; private set;}
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         BSL = initBSL;
         prevNumGLUKI = GameObject.FindGameObjectsWithTag("GLUKI").Length;
         BSLVal.text = BSL.ToString();
-        //slider.value = BSL;
+        slider.value = BSL;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         int numGLUKI = GameObject.FindGameObjectsWithTag("GLUKI").Length;
         int GLUKIDif = numGLUKI - prevNumGLUKI;
@@ -43,7 +43,7 @@ public class BloodSugarLevel : MonoBehaviour
         if (GLUKIDif != 0)
         {
             BSLVal.text = BSL.ToString();
-            //slider.value = BSL;
+            slider.value = BSL;
         }
 
         /*
@@ -57,5 +57,18 @@ public class BloodSugarLevel : MonoBehaviour
             // if negative -> GLUKIs have been absorbed by the cell -> decrease BSL
             BSL -= -GLUKIDif * GLUKIBSLVal; //GLUKIDif is negative to make the math work right
         }*/
+    }
+
+    public bool HealthyBloodLevel()
+    {
+        // if blood meter is between good blood sugar level: 80 <= BSL <= 130
+        if (minGoodBSL <= BSL && BSL <= maxGoodBSL)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

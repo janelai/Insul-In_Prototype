@@ -6,7 +6,7 @@ public class GLUKIBehavior : MonoBehaviour
 {
     public GameObject pivot_point;
     private Vector3 cell_direction;
-    public float initial_speed = 100f;
+    public float initial_speed = 150f;
     private Rigidbody2D GLUKI;
 
     public float returnTimer = 2f;

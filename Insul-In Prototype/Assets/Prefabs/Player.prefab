@@ -163,7 +163,7 @@ Transform:
   - {fileID: 8942887032741934102}
   - {fileID: 4909249283185439636}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7466043693650851179
 GameObject:
@@ -204,9 +204,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 680045009269281380}
     m_Modifications:
+    - target: {fileID: 1563421594355150536, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: GameTimer
+      value: 61
+      objectReference: {fileID: 0}
     - target: {fileID: 2988579168174781546, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: m_Name
       value: PlayerHUDManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038273913992518550, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7919616109960846928, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9022792747678592034, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: m_RootOrder
@@ -358,46 +370,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1746379263681497675, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_Maskable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1746379263681497675, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2185024169660901011, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_Maskable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2185024169660901011, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2426917145525929321, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
       propertyPath: paddle
       value: 
       objectReference: {fileID: 4653969852290297150}
-    - target: {fileID: 3539892262483304886, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_Maskable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3539892262483304886, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4671588594176269081, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
       propertyPath: paddle
       value: 
       objectReference: {fileID: 4653969852290297150}
-    - target: {fileID: 5998318358147594258, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_Maskable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5998318358147594258, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7392157693546344666, guid: 09e91b34f2e2de546a5561d9a19807e3, type: 3}
       propertyPath: launcher_pos
       value: 
