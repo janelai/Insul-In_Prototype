@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465503576dd91b2499cebed5dfd7941a, type: 3}
+  m_Name: FunFactTest
+  m_EditorClassIdentifier: 
+  sentences:
+  - Type 1 Diabetes is an autoimmune disease where your immune system attacks the
+    pancreas where insulin is made.
+  - You need insulin to help open up the cells to let your glucose molecules in the
+    cells to convert to energy.
+  - Your blood sugar is measured by how much sugar is in your bloodstream.  An average
+    blood sugar is between 70-140 mg/dL.
+  - "If your blood sugar is too low that means you used too much insulin to open
+    up the cells. If your blood sugar is too high that means you need more insulin
+    to open up the cells to let the little GLUKI\u2019s in."

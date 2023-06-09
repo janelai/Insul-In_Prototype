@@ -6,6 +6,7 @@ using TMPro;
 
 public class PlayerHUDManager : MonoBehaviour
 {
+    // Necessary for game loop:
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject endMenu;
     [SerializeField] private GameObject winImage;
@@ -14,6 +15,9 @@ public class PlayerHUDManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private BloodSugarLevel bloodSugarLevel;
     [SerializeField] private float GameTimer = 5f; // Game Lasts 30 Seconds
+
+    // Fun fact or dialogue components below:
+    [SerializeField] private GameObject funFactCanvas;
     
     private float ElapsedTime;
 
@@ -54,6 +58,20 @@ public class PlayerHUDManager : MonoBehaviour
             pauseMenu.SetActive(false);
         }
 
+    }
+
+    public void TriggerFunFact()
+    {
+        if (!funFactCanvas.activeSelf)      // if fun fact canvas is not active
+        {
+            pauseMenu.SetActive(false);
+            funFactCanvas.SetActive(true);
+        }
+        else                                // if fun fact is active, turn it off
+        {
+            pauseMenu.SetActive(true);
+            funFactCanvas.SetActive(false);
+        }
     }
 
     public void EndGame()

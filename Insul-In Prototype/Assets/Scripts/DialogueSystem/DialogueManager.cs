@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private float typePerSeconds = 0.2f;
+    [SerializeField] private float typePerSeconds = 0.015f;
     private TextMeshProUGUI dialogueText;
     private GameObject uiButton;
     private Queue<string> lines;
@@ -47,20 +47,21 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence()
+    public bool DisplayNextSentence()
     {
         if (lines != null && lines.Count == 0)
         {
             // End of Dialogue
             Debug.Log("End of Dialogue");
-            return;
+            return true;
         }
         string displaySentence = lines.Dequeue();
         if (dialogueText != null)
         {
             StopAllCoroutines();
             StartCoroutine(TypeOutSentence(displaySentence));
-        }            
+        }
+        return false;
     }
 
     private IEnumerator TypeOutSentence(string displaySentence)

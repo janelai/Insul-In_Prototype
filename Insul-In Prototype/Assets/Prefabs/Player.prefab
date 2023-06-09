@@ -163,7 +163,7 @@ Transform:
   - {fileID: 8942887032741934102}
   - {fileID: 4909249283185439636}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7466043693650851179
 GameObject:
@@ -204,6 +204,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 680045009269281380}
     m_Modifications:
+    - target: {fileID: 812281680404622478, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1563421594355150536, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: GameTimer
       value: 61
@@ -214,6 +218,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5038273913992518550, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571866848421855788, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880444786660993214, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
+      propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7919616109960846928, guid: ea90579a5ae1ef44faec863c9ef3dda8, type: 3}
