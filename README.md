@@ -1,7 +1,7 @@
 # Insul-In_Prototype
-INF 117 Game Project
+This Git Repository and everything within it is owned by Staci DePattie.
 
-Developed by Hibernated Anteaters Dev:
+(Version 1) Developed by Hibernated Anteaters Dev:
 - Jameson Davis: Level Designer
 - Jane Lai: UI Artist
 - Lizbeth Alcaraz: Gameplay/UI/UX Programmer & Producer
@@ -10,6 +10,11 @@ Developed by Hibernated Anteaters Dev:
 
 Credits:
 - GLUKI character own by Staci DePattie
+
+Game Engine & Script Language:
+- Unity
+- C#
+- Exportable to Andriod Devices
 
 Control Schemes:
 - Left-bottom button: Transition paddle to the left
