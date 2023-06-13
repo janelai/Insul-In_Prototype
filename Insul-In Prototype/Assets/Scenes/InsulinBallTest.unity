@@ -1089,10 +1089,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6122129235986407712, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1887969926}
     - target: {fileID: 6124454455228023270, guid: 27501a393a0162a4e8e7684298cb210e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
