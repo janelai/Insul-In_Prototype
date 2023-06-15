@@ -1,5 +1,5 @@
 # Insul-In_Prototype
-This Git Repository and everything within it is owned by Staci DePattie.
+This Git Repository and everything within it is owned by Staci DePatie.
 
 (Version 1) Developed by Hibernated Anteaters Dev:
 - Jameson Davis: Level Designer
@@ -9,7 +9,7 @@ This Git Repository and everything within it is owned by Staci DePattie.
 - Patrick Gudikunst: Gameplay Programmer & Designer
 
 Credits:
-- GLUKI character own by Staci DePattie
+- GLUKI character own by Staci DePatie
 
 Game Engine & Script Language:
 - Unity
