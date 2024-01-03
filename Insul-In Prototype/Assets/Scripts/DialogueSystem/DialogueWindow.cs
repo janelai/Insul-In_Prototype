@@ -9,7 +9,12 @@ public class DialogueWindow : MonoBehaviour
     [SerializeField] private GameObject textObject;
     [SerializeField] private GameObject nextButton;
     [SerializeField] private GameObject doneButton;
-    
+    public int step;
+
+    private void Start()
+    {
+        step = 0;
+    }
 
     // When dialogue box is enabled:
     private void OnEnable()
@@ -26,5 +31,6 @@ public class DialogueWindow : MonoBehaviour
     {
         nextButton.SetActive(false);
         DialogueManager.Instance.DisplayNextSentence();
+        step += 1;
     }
 }
