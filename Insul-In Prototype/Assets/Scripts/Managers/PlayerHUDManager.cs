@@ -6,6 +6,7 @@ using TMPro;
 
 public class PlayerHUDManager : MonoBehaviour
 {
+    public InsulinGameManager InsulinGameManager;
     // Necessary for game loop:
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject endMenu;
@@ -15,34 +16,44 @@ public class PlayerHUDManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private BloodSugarLevel bloodSugarLevel;
     [SerializeField] private float GameTimer = 5f; // Game Lasts 30 Seconds
+    //[SerializeField] private bool inTutorial;
 
     // Fun fact or dialogue components below:
     [SerializeField] private GameObject funFactCanvas;
-    
+    [SerializeField] private GameObject tutorialCanvas;
+        
     private float ElapsedTime;
+
+    public bool CanStart;
 
     // just testing if this works :)
     private void Awake()
     {
+        //TriggerTutorial();
         ElapsedTime = GameTimer;
+        InitializeTime(ElapsedTime);
     }
 
     private void FixedUpdate()
     {
-        if (ElapsedTime > 0f)   // if timer reaches 0
+        if (CanStart)
         {
-            ElapsedTime -= Time.deltaTime;
-            InitializeTime(ElapsedTime);
-        }
-        else
-        {
-            ElapsedTime = 0;
-            if (!endMenu.activeSelf) //if not already active -> call EndGame :)
+            if (ElapsedTime > 0f)   // if timer reaches 0
             {
-                EndGame();
+                ElapsedTime -= Time.deltaTime;
+                InitializeTime(ElapsedTime);
+            }
+            else
+            {
+                ElapsedTime = 0;
+                if (!endMenu.activeSelf) //if not already active -> call EndGame :)
+                {
+                    EndGame();
+                }
             }
         }
     }
+
     public void PauseGame()
     {
         //try to deactive the component, not the parent
@@ -72,6 +83,15 @@ public class PlayerHUDManager : MonoBehaviour
             pauseMenu.SetActive(true);
             funFactCanvas.SetActive(false);
         }
+    }
+
+    public void TriggerTutorial()
+    {
+        //inTutorial = true;
+        InsulinGameManager.Instance.Pause();
+
+        tutorialCanvas.SetActive(true);
+
     }
 
     public void EndGame()
