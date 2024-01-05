@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
 
     [SerializeField] private GameObject playerHudCanvas;
+    [SerializeField] private GameObject controlCanvas;
     [SerializeField] private GameObject bslLabel;
     [SerializeField] private GameObject bslNumber;
     [SerializeField] private GameObject timer;
     [SerializeField] private GameObject bloodSugarLevel;
+    [SerializeField] private GameObject ammo;
+    [SerializeField] private GameObject insulinLauncher;
+    [SerializeField] private GameObject left;
+    [SerializeField] private GameObject right;
 
     [SerializeField] private Dialogue dialogueList;
     [SerializeField] private GameObject textObject;
@@ -24,6 +30,7 @@ public class TutorialManager : MonoBehaviour
     {
         dialogueWindow = textObject.GetComponent<DialogueWindow>();
         playerHudCanvas = GameObject.Find("PlayerHUDCanvas");
+        controlCanvas = GameObject.Find("ControlCanvas");
     }
 
     // Update is called once per frame
@@ -49,6 +56,21 @@ public class TutorialManager : MonoBehaviour
         if (tutorialStep == 7)
         {
             timer.SetActive(true);
+        }
+        if (tutorialStep == 11)
+        {
+            controlCanvas.GetComponent<Canvas>().sortingOrder = 1;
+            ammo.SetActive(true);
+            insulinLauncher.SetActive(true);
+        }
+        if (tutorialStep == 11)
+        {
+            left.SetActive(true);
+            right.SetActive(true);
+        }
+        if (tutorialStep == 15)
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

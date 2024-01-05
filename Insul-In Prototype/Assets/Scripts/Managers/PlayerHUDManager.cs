@@ -16,28 +16,21 @@ public class PlayerHUDManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private BloodSugarLevel bloodSugarLevel;
     [SerializeField] private float GameTimer = 5f; // Game Lasts 30 Seconds
-    //[SerializeField] private bool inTutorial;
 
     // Fun fact or dialogue components below:
     [SerializeField] private GameObject funFactCanvas;
-    [SerializeField] private GameObject tutorialCanvas;
-        
-    private float ElapsedTime;
 
-    public bool CanStart;
+    private float ElapsedTime;
 
     // just testing if this works :)
     private void Awake()
     {
-        //TriggerTutorial();
         ElapsedTime = GameTimer;
         InitializeTime(ElapsedTime);
     }
 
     private void FixedUpdate()
     {
-        if (CanStart)
-        {
             if (ElapsedTime > 0f)   // if timer reaches 0
             {
                 ElapsedTime -= Time.deltaTime;
@@ -51,7 +44,6 @@ public class PlayerHUDManager : MonoBehaviour
                     EndGame();
                 }
             }
-        }
     }
 
     public void PauseGame()
@@ -83,15 +75,6 @@ public class PlayerHUDManager : MonoBehaviour
             pauseMenu.SetActive(true);
             funFactCanvas.SetActive(false);
         }
-    }
-
-    public void TriggerTutorial()
-    {
-        //inTutorial = true;
-        InsulinGameManager.Instance.Pause();
-
-        tutorialCanvas.SetActive(true);
-
     }
 
     public void EndGame()
